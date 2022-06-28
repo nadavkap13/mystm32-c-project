@@ -5,7 +5,7 @@
 #include "mymain.h"
 #include "main.h"
 #include "mybuzzer.h"
-
+#include "lightsens.h"
 int i=0;
 int song[] = {
 		NOTE_5,NOTE_1,NOTE_3,NOTE_4,
@@ -116,6 +116,7 @@ int length[]={
 extern TIM_HandleTypeDef htim6;
 extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim4;
+extern ADC_HandleTypeDef hadc1;
 #define MAX_BUFFER_LENGTH 100
 
 uint8_t cmdbuffer[MAX_BUFFER_LENGTH];
@@ -125,7 +126,8 @@ uint32_t tick = 0;
 uint32_t sec = 0;
 uint32_t min =0;
 uint32_t hour =0;
-
+uint32_t maxvalue = 10;
+LIGHTSENS sensor;
 LED ledred;
 LED ledblue;
 BUTTON button;
@@ -252,7 +254,9 @@ void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim)
 		  HAL_GPIO_WritePin(ledred.GPIOx, ledred.GPIO_Pin, 0);
 	}
 }
-
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc){
+	sensor.value = HAL_ADC_GetValue(sensor.ADC);
+}
   void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 
   }
@@ -287,11 +291,14 @@ int maininit(){
 	HAL_NVIC_EnableIRQ(TIM6_IRQn);
 	HAL_NVIC_EnableIRQ(TIM4_IRQn);
 	HAL_NVIC_EnableIRQ(TIM3_IRQn);
+	HAL_NVIC_EnableIRQ(ADC1_2_IRQn);
 
 	HAL_TIM_Base_Start(&htim3);
 	HAL_TIM_Base_Start_IT(&htim6);
+    HAL_ADC_Start_IT(&hadc1);
+    HAL_TIM_Base_Start_IT(&htim4);
 
-
+	lightsenseInit(&sensor, &hadc1, maxvalue);
 	buttoninit(&button, SWO_GPIO_Port, SWO_Pin);
 	ledInit(&ledred, RED_LED_GPIO_Port, RED_LED_Pin,TIM_CHANNEL_1,&htim4);
 	ledInit(&ledblue, GPIOA, GPIO_PIN_5,TIM_CHANNEL_2,&htim4);
@@ -307,6 +314,7 @@ int mainloop(){
 		 handleCommand();
 	 }
 
+	 ledsetbrightness(&ledred, getValue(&sensor));
 	return 0;
 }
 

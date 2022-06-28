@@ -13,7 +13,7 @@ int _write(int fd, char* ptr, int len);
 LED_STATE UPDATE(LED *led, int max);
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
-
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc);
 //void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 //		if(buzzer == 0 ){
 //			HAL_TIM_Base_Start(&htim3);
