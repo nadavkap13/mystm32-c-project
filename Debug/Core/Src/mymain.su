@@ -1,0 +1,8 @@
+../Core/Src/mymain.c:134:5:_write	24	static
+../Core/Src/mymain.c:138:5:commTask	16	static
+../Core/Src/mymain.c:187:6:handleCommand	40	static
+../Core/Src/mymain.c:249:6:HAL_TIM_PWM_PulseFinishedCallback	16	static
+../Core/Src/mymain.c:256:8:HAL_GPIO_EXTI_Callback	16	static
+../Core/Src/mymain.c:259:8:HAL_TIM_PeriodElapsedCallback	16	static
+../Core/Src/mymain.c:286:5:maininit	16	static
+../Core/Src/mymain.c:304:5:mainloop	8	static
