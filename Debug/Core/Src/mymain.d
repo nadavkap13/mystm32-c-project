@@ -1,6 +1,5 @@
 Core/Src/mymain.o: ../Core/Src/mymain.c ../Core/Inc/mymain.h \
- ../Core/Inc/mybuzzer.h ../Core/Inc/main.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
+ ../Core/Inc/main.h ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Core/Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h \
@@ -33,11 +32,12 @@ Core/Src/mymain.o: ../Core/Src/mymain.c ../Core/Inc/mymain.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
- ../Core/Inc/mymain.h ../Core/Inc/new_button.h ../Core/Inc/LED.h \
- ../Core/Inc/clock.h ../Core/Inc/main.h ../Core/Inc/mybuzzer.h \
+ ../Core/Inc/main.h ../Core/Inc/mybuzzer.h ../Core/Inc/CLI.h \
+ ../Core/Inc/comtask.h ../Core/Inc/DHA_11.h ../Core/Inc/new_button.h \
+ ../Core/Inc/clock.h ../Core/Inc/MainTimer.h ../Core/Inc/potentiometer.h \
+ ../Core/Inc/mybuzzer.h ../Core/Inc/Flash.h ../Core/Inc/LED.h \
  ../Core/Inc/lightsens.h
 ../Core/Inc/mymain.h:
-../Core/Inc/mybuzzer.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -72,10 +72,16 @@ Core/Src/mymain.o: ../Core/Src/mymain.c ../Core/Inc/mymain.h \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
-../Core/Inc/mymain.h:
-../Core/Inc/new_button.h:
-../Core/Inc/LED.h:
-../Core/Inc/clock.h:
 ../Core/Inc/main.h:
 ../Core/Inc/mybuzzer.h:
+../Core/Inc/CLI.h:
+../Core/Inc/comtask.h:
+../Core/Inc/DHA_11.h:
+../Core/Inc/new_button.h:
+../Core/Inc/clock.h:
+../Core/Inc/MainTimer.h:
+../Core/Inc/potentiometer.h:
+../Core/Inc/mybuzzer.h:
+../Core/Inc/Flash.h:
+../Core/Inc/LED.h:
 ../Core/Inc/lightsens.h:

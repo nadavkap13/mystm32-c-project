@@ -1,2 +1,2 @@
-../Core/Src/new_button.c:6:6:buttoninit	24	static
-../Core/Src/new_button.c:14:6:buttonpress	16	static
+../Core/Src/new_button.c:4:6:buttoninit	24	static
+../Core/Src/new_button.c:13:6:buttonpress	16	static

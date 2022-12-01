@@ -1,16 +1,11 @@
 #ifndef INC_MYMAIN_H_
 #define INC_MYMAIN_H_
-#include "mybuzzer.h"
-#include "new_button.h"
-#include "LED.h"
 #include "main.h"
-#include "clock.h"
+
 extern UART_HandleTypeDef huart2;
 
-int commTask();
-void handleCommand();
 int _write(int fd, char* ptr, int len);
-LED_STATE UPDATE(LED *led, int max);
+//LED_STATE UPDATE(LED *led, int max);
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc);
@@ -26,6 +21,4 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc);
 //			buzzer = 0;
 //		}
 //	}
-
-
 #endif /* INC_MYMAIN_H_ */

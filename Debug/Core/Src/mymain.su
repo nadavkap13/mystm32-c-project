@@ -1,9 +1,7 @@
-../Core/Src/mymain.c:136:5:_write	24	static
-../Core/Src/mymain.c:140:5:commTask	16	static
-../Core/Src/mymain.c:189:6:handleCommand	40	static
-../Core/Src/mymain.c:251:6:HAL_TIM_PWM_PulseFinishedCallback	16	static
-../Core/Src/mymain.c:257:6:HAL_ADC_ConvCpltCallback	16	static
-../Core/Src/mymain.c:260:8:HAL_GPIO_EXTI_Callback	16	static
-../Core/Src/mymain.c:263:8:HAL_TIM_PeriodElapsedCallback	16	static
-../Core/Src/mymain.c:290:5:maininit	16	static
-../Core/Src/mymain.c:311:5:mainloop	8	static
+../Core/Src/mymain.c:149:5:_write	24	static
+../Core/Src/mymain.c:155:6:HAL_TIM_PWM_PulseFinishedCallback	16	static
+../Core/Src/mymain.c:162:6:HAL_ADC_ConvCpltCallback	16	static
+../Core/Src/mymain.c:167:6:HAL_GPIO_EXTI_Callback	16	static
+../Core/Src/mymain.c:172:6:HAL_TIM_PeriodElapsedCallback	16	static
+../Core/Src/mymain.c:199:5:mymaininit	24	static
+../Core/Src/mymain.c:231:5:mymainloop	8	static

@@ -15,7 +15,7 @@ typedef struct _button{
 	uint16_t GPIO_Pin;
 	uint32_t pushtime;
 	uint32_t relesetime;
-	BUTTON_STATE* state;
+	BUTTON_STATE state;
 }BUTTON;
 
 

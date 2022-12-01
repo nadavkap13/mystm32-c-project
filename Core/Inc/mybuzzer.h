@@ -1,7 +1,7 @@
 #ifndef INC_MYBUZZER_H_
 #define INC_MYBUZZER_H_
 #include "main.h"
-#include "mymain.h"
+
 
 typedef struct _BUZZER{
 	TIM_HandleTypeDef *htim;
@@ -26,7 +26,7 @@ typedef enum _FRAME{
 }FRAME;
 void buzzerInit(BUZZER* buzzer,TIM_HandleTypeDef *htim);
 void buzzerStartPlay(BUZZER* buzzer,int* song, int* frames);
-void buzzerStopPlay();
+void buzzerStopPlay(BUZZER* buzzer);
 void buzzerOnInterrupt(BUZZER* buzzer);
 
 

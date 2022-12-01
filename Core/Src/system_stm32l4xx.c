@@ -221,7 +221,7 @@ void SystemInit(void)
   *           frequency in the chip. It is calculated based on the predefined
   *           constant and the selected clock source:
   *
-  *           - If SYSCLK source is MSI, SystemCoreClock will contain the MSI_VALUE(*)
+  *           - If SYSCLK source is MSI, SystemCoreClock will contain the MSI_VALUE(*)sdfdsf
   *
   *           - If SYSCLK source is HSI, SystemCoreClock will contain the HSI_VALUE(**)
   *

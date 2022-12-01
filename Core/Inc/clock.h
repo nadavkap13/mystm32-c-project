@@ -14,10 +14,7 @@ typedef struct _CLOCK{
 
 }CLOCK;
 
-
 void clockInit(CLOCK* clock,TIM_HandleTypeDef *htim);
-void clockOn(CLOCK* clock);
-void clockOff(CLOCK* clock);
 void getClockTick(CLOCK* clock,uint32_t* tick);
 void getTime( CLOCK* clock, uint32_t* sec,uint32_t* min, uint32_t* hour);
 void clockInInterrupt(CLOCK* clock);

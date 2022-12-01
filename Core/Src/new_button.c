@@ -1,9 +1,8 @@
-#include <stdint.h>
-#include <stdlib.h>
 #include "new_button.h"
 #include "main.h"
 
-void buttoninit(BUTTON* button, GPIO_TypeDef* GPIOx,uint16_t GPIO_Pin){
+void buttoninit(BUTTON* button, GPIO_TypeDef* GPIOx,uint16_t GPIO_Pin)
+{
 	button->GPIOx= GPIOx;
 	button->GPIO_Pin=GPIO_Pin;
 	 button->pushtime = 0;
@@ -11,7 +10,8 @@ void buttoninit(BUTTON* button, GPIO_TypeDef* GPIOx,uint16_t GPIO_Pin){
 	 button->state=STATE_NOT_PRESSED;
 }
 
-void buttonpress(BUTTON* button){
+void buttonpress(BUTTON* button)
+{
 
 	if(HAL_GPIO_ReadPin(button->GPIOx,button->GPIO_Pin)==0){
 		button->pushtime = HAL_GetTick();
